@@ -1,0 +1,42 @@
+- title: Home
+  icon: mdi:home
+  path: home
+  type: custom:dwains-dashboard-layout
+  cards:
+    - type: custom:homepage-card
+      card_mod:
+        style: |
+          :host {
+            --paper-tabs-content: {
+              display: flex !important;
+              flex-wrap: wrap !important;
+              flex-direction: row !important;
+            };
+          }
+          paper-tabs {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            height: auto !important;
+            min-height: 48px !important;
+          }
+          paper-tabs #tabsContent {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            flex-direction: row !important;
+            justify-content: flex-start !important;
+          }
+          paper-tab {
+            flex: 0 0 auto !important;
+            min-width: 60px !important;
+            max-width: 120px !important;
+          }
+          @media (max-width: 600px) {
+            paper-tabs {
+              height: auto !important;
+              overflow: visible !important;
+            }
+            paper-tabs #tabsContent {
+              flex-wrap: wrap !important;
+              gap: 4px !important;
+            }
+          }
