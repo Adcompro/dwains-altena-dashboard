@@ -61,9 +61,23 @@ Deze fork bevat de volgende verbeteringen ten opzichte van de originele v3.8.0:
 
 1. Download de laatste release
 2. Kopieer de `dwains_dashboard` map naar `/config/custom_components/`
-3. Herstart Home Assistant
-4. Ga naar **Instellingen** → **Apparaten & Services** → **Integratie toevoegen**
-5. Zoek naar "Dwains Dashboard"
+3. **Maak de vereiste mappen aan** (zie hieronder)
+4. Herstart Home Assistant
+5. Ga naar **Instellingen** → **Apparaten & Services** → **Integratie toevoegen**
+6. Zoek naar "Dwains Dashboard"
+
+### Vereiste mappen aanmaken
+
+Dwains Dashboard verwacht bepaalde configuratie mappen. Maak deze aan als ze niet bestaan:
+
+```bash
+mkdir -p /config/dwains-dashboard/button_card_templates
+mkdir -p /config/dwains-dashboard/apexcharts_card_templates
+mkdir -p /config/dwains-dashboard/configs
+mkdir -p /config/dwains-dashboard/blueprints
+```
+
+**Belangrijk:** Zonder deze mappen krijg je een "configuratiefout" bij het laden van het dashboard.
 
 ---
 
